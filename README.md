@@ -5,6 +5,7 @@ This project amis to classify the bird's type among 200 classes.
 
 ![](Image/image1.png)
 
+
 **About the dataset [1]** ([Download the dataset](https://www.kaggle.com/datasets/xiaojiu1414/cub-200-2011)):
 
 The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used dataset for fine-grained visual categorization task. It contains 11,788 images of 200 subcategories belonging to birds, 5,994 for training and 5,794 for testing. Each image has detailed annotations: 1 subcategory label, 15 part locations, 312 binary attributes and 1 bounding box. The textual information comes from Reed et al.. They expand the CUB-200-2011 dataset by collecting fine-grained natural language descriptions. Ten single-sentence descriptions are collected for each image. The natural language descriptions are collected through the Amazon Mechanical Turk (AMT) platform, and are required at least 10 words, without any information of subcategories and actions.
@@ -23,9 +24,9 @@ The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used d
 - I used two layers with 256 and 128 neurons to be able to train it with the res-net in Part 2 without any ram issues.
 - Also, I used BatchNormalization and  Dropout to reduce the overfitting.
 
-| Loss curve            | Accuracy curve            |
-|-----------------------|---------------------------|
-| ![1](Image/Output.png) | ![2](Image/Output2.png)    |
+| Loss curve             | Accuracy curve          |
+|------------------------|-------------------------|
+| ![1](Image/output.png) | ![2](Image/output2.png) |
 
 
 **Conclusion:**
@@ -38,16 +39,16 @@ The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used d
 ### Resnet-101
 #### Freeze Resnet-101 architecture concatenated to the custom model
 
-| Loss curve             | Accuracy curve         |
-|------------------------|------------------------|
-| ![3](Image/Output3.png) | ![4](Image/Output4.png) |
+| Loss curve              | Accuracy curve          |
+|-------------------------|-------------------------|
+| ![3](Image/output3.png) | ![4](Image/output4.png) |
 
 
 #### Unfreeze some layers in the Resnet-101 architecture
 
 | Loss curve             | Accuracy curve         |
 |------------------------|------------------------|
-| ![](Image/Output5.png) | ![](Image/Output6.png) |
+| ![](Image/output5.png) | ![](Image/output6.png) |
 
 
 #### ResNet Conclusion
@@ -70,11 +71,11 @@ By comparing the model with freezing all the layers versus unfreezing some layer
 For this section i will visualize the filters learned by your ResNet-101 network using the t-SNE to observe clusters that were learned by your model.
 
 - **Visualizing the last layer's filters**
-![5](Image/Output7.png)
+![5](Image/output7.png)
 
 #### Visualize the best model embedding map
 **I would take the features of the last dense layer then localize it in the 2D space using T-sne algorithm.**
-![6](Image/Output8.png)
+![6](Image/output8.png)
 
 #### Visualization's Conclusion
 - By visualizing the filters of the first layer and comparing it with the final layer's filters, we easily deduce that the feature captured by the first layer is just simple features such as (points and lines),
