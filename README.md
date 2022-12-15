@@ -34,3 +34,31 @@ The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used d
 - If we used Convolution layers it would work better with this problem as it has many useful features such as:
     - Reducing the required parameter and parameter-sharing features
     - Eliminate the need for manual feature extraction
+
+### Resnet-101
+#### Freeze Resnet-101 architecture concatenated to the custom model
+
+| Loss curve             | Accuracy curve         |
+|------------------------|------------------------|
+| ![](Image/Output3.png) | ![](Image/Output4.png) |
+
+
+#### Unfreeze some layers in the Resnet-101 architecture
+
+| Loss curve             | Accuracy curve         |
+|------------------------|------------------------|
+| ![](Image/Output5.png) | ![](Image/Output6.png) |
+
+
+#### ResNet Conclusion
+The pre-trained model has an overall better performance than our customized one due to:
+- It's trained on an image-net dataset which is a near to our problem.
+- It uses CNN which is effective with image and easier to generalize.
+
+By comparing the model with freezing all the layers versus unfreezing some layers we found that:
+- First and second figure shows both models overfit the training data, but the unfrozen model perform better on the testing data
+- Third and forth figure shows both model losses reduced the same on the training but the unfrozen model perform better on the testing data
+
+- Both models reached almost 100% on the training dataset but that is not a good metric for the performance meature
+- The unfreezing model perform better as it reached 70% on the testing set while the freezing model reached only 59% on the testing data
+- Also, the loss decreases faster in the unfrozen model.
