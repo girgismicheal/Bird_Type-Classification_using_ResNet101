@@ -62,3 +62,23 @@ By comparing the model with freezing all the layers versus unfreezing some layer
 - Both models reached almost 100% on the training dataset but that is not a good metric for the performance meature
 - The unfreezing model perform better as it reached 70% on the testing set while the freezing model reached only 59% on the testing data
 - Also, the loss decreases faster in the unfrozen model.
+
+
+### Visualizations:
+
+#### Visualizing the best filter's weights
+For this section i will visualize the filters learned by your ResNet-101 network using the t-SNE to observe clusters that were learned by your model.
+
+- **Visualizing the last layer's filters**
+![](Image/Output7.png)
+
+#### Visualize the best model embedding map
+**I would take the features of the last dense layer then localize it in the 2D space using T-sne algorithm.**
+![](Image/Output8.png)
+
+#### Visualization's Conclusion
+- By visualizing the filters of the first layer and comparing it with the final layer's filters, we easily deduce that the feature captured by the first layer is just simple features such as (points and lines),
+but at the last layer, there are more complicated features.
+- By visualizing extracted feature of the layer before the softmax using tsne algorithm, we can find the features of the same class are near in the projected space and the different classes are far from each other.
+- Also, by visualizing the test set in the projected space, we found the image that has common features such as red wings or something common is clustered together.
+
