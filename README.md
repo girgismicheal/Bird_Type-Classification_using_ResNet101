@@ -82,3 +82,6 @@ but at the last layer, there are more complicated features.
 - By visualizing extracted feature of the layer before the softmax using tsne algorithm, we can find the features of the same class are near in the projected space and the different classes are far from each other.
 - Also, by visualizing the test set in the projected space, we found the image that has common features such as red wings or something common is clustered together.
 
+## References:
+- [1] Papers with Code - CUB-200-2011 Dataset. (n.d.). https://paperswithcode.com/dataset/cub-200-2011
+
