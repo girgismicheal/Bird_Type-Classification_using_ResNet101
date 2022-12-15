@@ -17,3 +17,20 @@ The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used d
   - 312 Binary Attributes 
   - 1 Bounding Box
 
+## Results
+### Custom model
+**For building the model:**
+- I used two layers with 256 and 128 neurons to be able to train it with the res-net in Part 2 without any ram issues.
+- Also, I used BatchNormalization and  Dropout to reduce the overfitting.
+
+| Loss curve            | Accuracy curve            |
+|-----------------------|---------------------------|
+| ![](Image/Output.png) | ![](Image/Output2.png)    |
+
+
+**Conclusion:**
+- The training is so slow due to a large number of parameters due to a large number of features in the (32 * 32 * 3) image which causes a huge number of parameters.
+- The training accuracy reached above 60% while the testing accuracy was under 10.8% which means the model highly overfitted the training data because of a large number of features and parameters.
+- If we used Convolution layers it would work better with this problem as it has many useful features such as:
+    - Reducing the required parameter and parameter-sharing features
+    - Eliminate the need for manual feature extraction
