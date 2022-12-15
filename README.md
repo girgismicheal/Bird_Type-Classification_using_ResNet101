@@ -25,7 +25,7 @@ The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used d
 
 | Loss curve            | Accuracy curve            |
 |-----------------------|---------------------------|
-| ![](Image/Output.png) | ![](Image/Output2.png)    |
+| ![1](Image/Output.png) | ![2](Image/Output2.png)    |
 
 
 **Conclusion:**
@@ -40,7 +40,7 @@ The Caltech-UCSD Birds-200-2011 (CUB-200-2011) dataset is the most widely-used d
 
 | Loss curve             | Accuracy curve         |
 |------------------------|------------------------|
-| ![](Image/Output3.png) | ![](Image/Output4.png) |
+| ![3](Image/Output3.png) | ![4](Image/Output4.png) |
 
 
 #### Unfreeze some layers in the Resnet-101 architecture
@@ -70,11 +70,11 @@ By comparing the model with freezing all the layers versus unfreezing some layer
 For this section i will visualize the filters learned by your ResNet-101 network using the t-SNE to observe clusters that were learned by your model.
 
 - **Visualizing the last layer's filters**
-![](Image/Output7.png)
+![5](Image/Output7.png)
 
 #### Visualize the best model embedding map
 **I would take the features of the last dense layer then localize it in the 2D space using T-sne algorithm.**
-![](Image/Output8.png)
+![6](Image/Output8.png)
 
 #### Visualization's Conclusion
 - By visualizing the filters of the first layer and comparing it with the final layer's filters, we easily deduce that the feature captured by the first layer is just simple features such as (points and lines),
